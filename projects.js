@@ -54,7 +54,7 @@ const PROJECTS = [
     category: 'professional',
     featured: true,
     blurb:
-      'Capstone for KT AIVLE School, where I led a team of twelve. A chatbot that ' +
+      'Capstone for the KT AIVLE School AI track, where I led the project team. A chatbot that ' +
       'absorbed the repetitive half of HR onboarding Q&A using the GPT API and BERT, ' +
       'with KNN and Random Forest models classifying user behaviour to personalise ' +
       'training paths. Cut onboarding time by roughly a quarter.',
