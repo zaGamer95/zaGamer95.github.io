@@ -9,6 +9,7 @@ JavaScript served by GitHub Pages. No build step, no dependencies, nothing to in
 | --- | --- |
 | `index.html` | The whole page: hero, about, experience, projects, contact |
 | `projects.js` | **Project data.** The only file you need to touch to add work |
+| `i18n.js` | **All page copy, in four languages.** Edit wording here |
 | `main.js` | Theme toggle, email assembly, project filtering |
 | `style.css` | All styling, including the dark theme |
 | `cv.html` | The CV — single source of truth for its content |
@@ -45,6 +46,56 @@ array — nothing else needs editing. A project with an empty `links: []` shows 
 
 Six projects show on load; the rest sit behind **Show more**. Change
 `VISIBLE_BY_DEFAULT` in `main.js` to adjust.
+
+## Languages
+
+The page runs in English, Korean, Japanese and Chinese, chosen with the globe
+button beside the theme toggle. English lives in `index.html` as ordinary markup —
+so search engines and anyone without JavaScript still get a real page — and the
+other three swap in at runtime from [`i18n.js`](i18n.js).
+
+The language is picked in this order: `?lang=ko` in the URL, then the visitor's
+previous choice, then their browser's preference, then English. Choosing one
+updates the URL, so `wonbo.site/?lang=ja` is a shareable link.
+
+### Changing wording
+
+Every string is in [`i18n.js`](i18n.js), keyed to a `data-i18n` attribute in the
+HTML. To reword something, find its key and edit all four entries. **A missing key
+falls back to English rather than rendering blank**, so a half-translated change is
+visible rather than broken.
+
+Check the four languages still line up after editing:
+
+```bash
+python3 - <<'EOF'
+import io, re
+s = io.open('i18n.js', encoding='utf-8').read()
+blocks = {}
+for m in re.finditer(r"\n  (en|ko|ja|zh): \{", s):
+    lang, start = m.group(1), m.end(); depth, i = 1, m.end()
+    while depth:
+        depth += (s[i] == '{') - (s[i] == '}'); i += 1
+    blocks[lang] = s[start:i]
+keys = {l: set(re.findall(r"'([a-zA-Z0-9_.]+)':", b)) for l, b in blocks.items()}
+for l in ('ko','ja','zh'):
+    miss = sorted(keys['en'] - keys[l])
+    print(l, 'missing:', miss if miss else 'none')
+EOF
+```
+
+### A new project in four languages
+
+In `projects.js`, `title`, `blurb` and `status` take an object keyed by language.
+Only `en` is required — anything you leave out falls back to English, so you can
+publish a project immediately and translate it later.
+
+Two notes for whoever proofreads. The Chinese page uses **沈元輔**, the form Wonbo
+supplied; the simplified variant is 沈元辅. And the Languages line deliberately
+lists only Korean, English and Japanese in every version, including the Chinese
+one — the Chinese page is a courtesy, not a claim of fluency.
+
+The CV page is English only, by choice. Its globe is intentionally absent.
 
 ## The categories
 
