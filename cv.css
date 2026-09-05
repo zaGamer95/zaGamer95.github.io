@@ -1,0 +1,151 @@
+/* ============================================================
+   CV page. Screen styling first, then an @media print block
+   that turns the same markup into a clean A4 document.
+   Tokens come from style.css.
+   ============================================================ */
+
+.cv-bar {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.6) blur(10px);
+  -webkit-backdrop-filter: saturate(1.6) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.cv-bar .wrap { display: flex; align-items: center; gap: 0.75rem; min-height: 4rem; }
+.cv-bar .back {
+  margin-right: auto; font-size: 0.9rem; text-decoration: none;
+  color: var(--text-soft); display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.cv-bar .back:hover { color: var(--accent); }
+.cv-bar .back::before { content: '\2190'; }
+
+.cv-page { max-width: 52rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+/* style.css styles bare <section> for the homepage's full-bleed bands
+   (4.5rem padding, a border between siblings). The CV uses <section>
+   as a plain document division, so neutralise that here. */
+.cv-page section { padding: 0; border-top: none; }
+
+/* ── masthead ─────────────────────────────────────────── */
+
+.cv-head { border-bottom: 2px solid var(--text); padding-bottom: 1.25rem; margin-bottom: 1.75rem; }
+.cv-head h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem); margin: 0 0 0.35rem; letter-spacing: -0.02em;
+}
+.cv-head h1 .hanja { font-size: 0.55em; color: var(--muted); font-weight: 400; margin-left: 0.4rem; }
+.cv-head .cv-title { color: var(--accent); font-size: 1.02rem; margin: 0 0 0.9rem; }
+
+.cv-contact {
+  margin: 0; padding: 0;
+  font-size: 0.88rem; color: var(--text-soft); line-height: 1.9;
+}
+.cv-contact .sep { color: var(--line-strong); }
+.cv-contact a { color: var(--text-soft); text-decoration: none; }
+.cv-contact a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ── sections ─────────────────────────────────────────── */
+
+.cv-section { margin-bottom: 2rem; }
+.cv-section > h2 {
+  font-family: var(--font-body);
+  font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 0.9rem; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-summary { color: var(--text-soft); font-size: 0.97rem; }
+
+.cv-entry { margin-bottom: 1.4rem; }
+.cv-entry:last-child { margin-bottom: 0; }
+
+.cv-entry-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.75rem;
+  margin-bottom: 0.15rem;
+}
+.cv-entry-head h3 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 600; margin: 0; }
+.cv-entry-head .when {
+  margin-left: auto; font-size: 0.85rem; color: var(--muted);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.cv-entry .org { font-size: 0.92rem; color: var(--text-soft); margin: 0 0 0.5rem; }
+.cv-entry .org .where { color: var(--muted); }
+.cv-entry .org .where::before { content: ' · '; }
+
+.cv-entry ul { margin: 0; padding-left: 1.15rem; }
+.cv-entry li { font-size: 0.93rem; color: var(--text-soft); margin-bottom: 0.3rem; }
+.cv-entry li:last-child { margin-bottom: 0; }
+.cv-entry > p.note { font-size: 0.93rem; color: var(--text-soft); margin: 0; }
+
+/* ── skills / certs ───────────────────────────────────── */
+
+.cv-defs { display: grid; gap: 0.6rem; margin: 0; }
+.cv-defs .row { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 1rem; }
+@media (max-width: 620px) { .cv-defs .row { grid-template-columns: 1fr; gap: 0.1rem; } }
+.cv-defs dt { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+.cv-defs dd { margin: 0; font-size: 0.92rem; color: var(--text-soft); }
+
+.cv-certs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.cv-certs li { font-size: 0.92rem; color: var(--text-soft); }
+.cv-certs .issuer { color: var(--muted); }
+.cv-certs .issuer::before { content: ' — '; }
+
+.cv-foot {
+  margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  font-size: 0.82rem; color: var(--muted);
+}
+
+/* ============================================================
+   PRINT — A4, black on white, no chrome.
+   ============================================================ */
+
+@media print {
+  @page { size: A4; margin: 14mm 15mm; }
+
+  :root {
+    --text: #000; --text-soft: #1a1a1a; --muted: #555;
+    --line: #bbb; --accent: #000; --bg: #fff;
+    color-scheme: light;
+  }
+
+  html, body { background: #fff !important; color: #000 !important; }
+
+  .cv-bar, .site-footer, .cv-foot, .skip { display: none !important; }
+
+  .cv-page { max-width: none; margin: 0; padding: 0; }
+
+  body { font-size: 9.9pt; line-height: 1.38; }
+
+  .cv-head { border-bottom: 1.5pt solid #000; padding-bottom: 6pt; margin-bottom: 10pt; }
+  .cv-head h1 { font-size: 20pt; margin-bottom: 1pt; }
+  .cv-head .cv-title { font-size: 10pt; color: #000; margin-bottom: 4pt; }
+  .cv-contact { font-size: 8.6pt; line-height: 1.5; }
+  .cv-contact .sep { color: #888; }
+  .cv-contact a { color: #000; }
+
+  .cv-section { margin-bottom: 9pt; }
+  .cv-section > h2 {
+    font-size: 8.6pt; letter-spacing: 0.12em; color: #000;
+    border-bottom: 0.5pt solid #888; padding-bottom: 2pt; margin-bottom: 7pt;
+  }
+
+  .cv-summary { font-size: 9.8pt; }
+
+  .cv-entry { margin-bottom: 7pt; }
+  .cv-entry-head h3 { font-size: 10.2pt; }
+  .cv-entry-head .when { font-size: 8.7pt; }
+  .cv-entry .org { font-size: 9pt; margin-bottom: 2pt; }
+  .cv-entry li, .cv-entry > p.note { font-size: 9.3pt; margin-bottom: 1.2pt; }
+  .cv-entry ul { padding-left: 12pt; }
+
+  .cv-defs dt, .cv-defs dd, .cv-certs li { font-size: 9.3pt; }
+  .cv-defs { gap: 2pt; }
+  /* Certifications sit in two columns in print — the list is short lines. */
+  .cv-certs { gap: 1pt; grid-template-columns: 1fr 1fr; }
+
+  /* Keep an entry and its section heading intact across pages. */
+  .cv-entry, .cv-head { break-inside: avoid; page-break-inside: avoid; }
+  .cv-section > h2 { break-after: avoid; page-break-after: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+  a { text-decoration: none; color: #000; }
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Wonbo Shim</title>
+<meta name="description" content="Curriculum vitae of Wonbo Shim — data scientist and backend engineer, MSc Biomedical Informatics candidate at the National University of Singapore.">
+<link rel="canonical" href="https://wonbo.site/cv.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e7c6b'/><text x='50' y='71' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cv.css">
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#cv">Skip to the CV</a>
+
+<div class="cv-bar">
+  <div class="wrap">
+    <a class="back" href="/">Back to wonbo.site</a>
+    <a class="btn btn-primary" href="cv.pdf" download="Wonbo-Shim-CV.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+      Download PDF
+    </a>
+    <button class="btn btn-ghost" type="button" id="print-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+      Print
+    </button>
+  </div>
+</div>
+
+<!--
+  Deliberately not on this page, because it is public and gets scraped:
+    * Phone number (+82 10-9309-5104). Add it to the contact line below if you
+      want it on the PDF you send to applications.
+    * Any account of the Feb 2024 - Feb 2025 gap. LinkedIn files it as a career
+      break; add a line to Experience if you would rather address it directly.
+  Edit this file, then run ./make-cv-pdf.sh to refresh cv.pdf.
+-->
+<main class="cv-page" id="cv">
+
+  <header class="cv-head">
+    <h1>Wonbo Shim <span class="hanja">심원보</span></h1>
+    <p class="cv-title">Data Scientist &amp; Backend Engineer · MSc Biomedical Informatics candidate</p>
+    <p class="cv-contact">
+      <span id="cv-email">wonbo123 [at] gmail.com</span>
+      <span class="sep">&nbsp;·&nbsp;</span><a href="https://www.linkedin.com/in/wonbo-shim/">linkedin.com/in/wonbo-shim</a>
+      <span class="sep">&nbsp;·&nbsp;</span><a href="https://github.com/zaGamer95">github.com/zaGamer95</a>
+      <span class="sep">&nbsp;·&nbsp;</span><a href="https://wonbo.site">wonbo.site</a>
+      <span class="sep">&nbsp;·&nbsp;</span><span>Singapore · Seoul</span>
+    </p>
+  </header>
+
+  <!-- ── profile ────────────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Profile</h2>
+    <p class="cv-summary">
+      Software engineer turned data scientist, now retraining in health data. Six years
+      across live game development, NLP product engineering and commercial analytics —
+      shipping client features for a title that reached ten million players, building
+      question-answering APIs in production, and turning fragmented catalogues and
+      storefronts into datasets teams could actually report on. Currently reading for an
+      MSc in Biomedical Informatics at the National University of Singapore, pairing that
+      engineering background with clinical and statistical grounding. Native in Korean and
+      English. Open to roles and research collaborations in Singapore.
+    </p>
+  </section>
+
+  <!-- ── experience ─────────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Experience</h2>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Data Analyst</h3>
+        <span class="when">Oct 2025 — Jul 2026</span>
+      </div>
+      <p class="org">AIVE Labs<span class="where">Seoul, South Korea</span></p>
+      <ul>
+        <li>
+          Ran monitoring and reporting for LG Electronics Global, covering the LG.com home
+          appliance and air conditioner storefronts across multiple regions.
+        </li>
+        <li>
+          Produced the monthly analytical read on site health — SEO and GEO competitiveness,
+          content integrity and performance trends — for the global digital marketing and
+          commerce teams.
+        </li>
+        <li>
+          Maintained a CRM application built with AmorePacific's New Commerce team to support
+          sales operations, monitoring usage and performance and delivering daily, weekly and
+          monthly reporting for decision making.
+        </li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Data Analyst</h3>
+        <span class="when">Mar — Jun 2025</span>
+      </div>
+      <p class="org">Purple Academy<span class="where">Seoul, South Korea</span></p>
+      <ul>
+        <li>
+          Consolidated and structured metadata for over 80,000 books into a SQL-based dataset,
+          reducing retrieval time by more than 60%.
+        </li>
+        <li>
+          Graded English vocabulary collected from textbooks into difficulty levels by school
+          year, enabling systematic classification of book content.
+        </li>
+        <li>
+          Designed a department-level data mart integrating students, courses, learning
+          materials and books, cutting reporting from days to hours.
+        </li>
+        <li>
+          Built the foundational dataset for rebuilding the book recommendation system, and
+          tracked KPI metrics for the academy's public platforms.
+        </li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Manager, Question Answering</h3>
+        <span class="when">Oct 2021 — Jul 2022</span>
+      </div>
+      <p class="org">42Maru<span class="where">Seoul, South Korea</span></p>
+      <ul>
+        <li>
+          Contributed to API development for the company's AI-powered question-answering
+          solution.
+        </li>
+        <li>
+          Built RESTful APIs in Python and FastAPI for member management and the QA product,
+          improving response times by roughly 35%.
+        </li>
+        <li>
+          Handled deployment with Docker and AWS, and owned data formatting and the pandas
+          analytics pipelines behind the product.
+        </li>
+        <li>Served as Industrial Technical Personnel under alternative national service.</li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Junior Software Engineer</h3>
+        <span class="when">May 2020 — Oct 2021</span>
+      </div>
+      <p class="org">Kong Studios<span class="where">Seoul, South Korea</span></p>
+      <ul>
+        <li>
+          Developed client-side quest and gameplay features for <em>Guardian Tales</em>, through
+          a global launch across more than 230 countries — 10M+ downloads and a 4.9/5 rating
+          within its first months.
+        </li>
+        <li>
+          Built management tooling for in-game content updates and real-time event handling,
+          cutting deployment time by about 40%, customer ticket resolution by about 30% and
+          downtime on urgent fixes by about 25%.
+        </li>
+        <li>
+          Designed data mining pipelines analysing player behaviour, quest completion rates
+          and in-game purchase patterns against revenue.
+        </li>
+        <li>
+          Contributed to the studio's official and Japanese game websites, supporting market
+          entries in China (#1 free game on the App Store at release) and Japan.
+        </li>
+        <li>
+          Coordinated database migration and cross-region data transmission for the China
+          branch.
+        </li>
+        <li>Served as Industrial Technical Personnel under alternative national service.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ── education ──────────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Education</h2>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>MSc, Biomedical Informatics</h3>
+        <span class="when">Aug 2026 — Jul 2027</span>
+      </div>
+      <p class="org">National University of Singapore<span class="where">Singapore</span></p>
+      <p class="note">
+        In progress. Coursework across clinical decision support, bioinformatics and health
+        sciences for non-clinicians.
+      </p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>AIVLE School — AI Developer Track</h3>
+        <span class="when">Aug 2023 — Jan 2024</span>
+      </div>
+      <p class="org">KT (Korea Telecom)<span class="where">Seongnam, South Korea</span></p>
+      <p class="note">
+        Six-month intensive AI development programme, completed with the Team Argo capstone
+        described below.
+      </p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>B.E., Computer Science and Engineering</h3>
+        <span class="when">Mar 2015 — Aug 2023</span>
+      </div>
+      <p class="org">Korea University<span class="where">Seoul, South Korea</span></p>
+      <ul>
+        <li>GPA 86.6/100. Studies interrupted by national service.</li>
+        <li>Exchange student, Institute of Science Tokyo (Tokyo Tech), Mar — Aug 2019.</li>
+        <li>Member of CATDOG (game development) and KUICS (information security).</li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Computer Science</h3>
+        <span class="when">Sep 2014 — Feb 2015</span>
+      </div>
+      <p class="org">Stony Brook University<span class="where">New York, United States</span></p>
+      <p class="note">GPA 4.5/4.5. Left to transfer to Korea University.</p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Secondary education</h3>
+        <span class="when">2010 — 2014</span>
+      </div>
+      <p class="org">Tashkent International School · American School of Dubai</p>
+      <p class="note">
+        IB Diploma Programme, Tashkent (2013 — 2014). High School Diploma, Dubai (2010 — 2012).
+      </p>
+    </article>
+  </section>
+
+  <!-- ── projects ───────────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Selected projects</h2>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Argo — AI onboarding assistant</h3>
+        <span class="when">Aug 2023 — Jan 2024</span>
+      </div>
+      <p class="org">Team lead · KT AIVLE School capstone</p>
+      <ul>
+        <li>
+          Led the project end to end: requirement definitions, UML diagrams, Agile sprints and
+          customer feedback loops, delivered on schedule.
+        </li>
+        <li>
+          Built an onboarding chatbot on the GPT API and BERT that absorbed repetitive HR
+          question answering, reducing HR workload by roughly 50% and onboarding time by
+          about 25%.
+        </li>
+        <li>
+          Applied KNN and Random Forest models to classify user behaviour and personalise
+          training paths.
+        </li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>tefoma — strategy reference</h3>
+        <span class="when">2026</span>
+      </div>
+      <p class="org">wonbo.site/tefoma</p>
+      <p class="note">
+        A React and TypeScript single-page app serving a board game strategy guide, driven
+        entirely from Markdown and JSON so contributors can propose edits by pull request.
+        Deployed continuously through GitHub Actions.
+      </p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Customer shopping trends analysis</h3>
+        <span class="when">2025</span>
+      </div>
+      <p class="org">github.com/zaGamer95/portfolio1</p>
+      <p class="note">
+        Exploratory segmentation of a public retail dataset by spend, category preference and
+        season, cross-checked in SQL against the notebook findings.
+      </p>
+    </article>
+  </section>
+
+  <!-- ── skills ─────────────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Skills</h2>
+    <dl class="cv-defs">
+      <div class="row">
+        <dt>Programming</dt>
+        <dd>Python · SQL · Java · JavaScript / TypeScript · React · Lua</dd>
+      </div>
+      <div class="row">
+        <dt>Data &amp; AI</dt>
+        <dd>Data analytics · data mining · NLP · pandas · NumPy · scikit-learn · PyTorch · TensorFlow · JAX</dd>
+      </div>
+      <div class="row">
+        <dt>Engineering</dt>
+        <dd>RESTful APIs · FastAPI · full-stack development · Agile · project management</dd>
+      </div>
+      <div class="row">
+        <dt>Cloud &amp; tooling</dt>
+        <dd>Docker · AWS · Google Cloud · Git</dd>
+      </div>
+      <div class="row">
+        <dt>Languages</dt>
+        <dd>Korean (native) · English (native) · Japanese (intermediate)</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ── certifications ─────────────────────────────────── -->
+  <section class="cv-section">
+    <h2>Certifications &amp; tests</h2>
+    <ul class="cv-certs">
+      <li>AICE Associate, AI Specialist Certification<span class="issuer">KT</span></li>
+      <li>SQL Developer (SQLD)<span class="issuer">Korea Data Agency</span></li>
+      <li>OPIc, Advanced Low<span class="issuer">ACTFL</span></li>
+      <li>TOEIC 990<span class="issuer">ETS</span></li>
+      <li>TOEFL 110<span class="issuer">ETS</span></li>
+    </ul>
+  </section>
+
+  <p class="cv-foot">
+    Last updated September 2026. The current version of this CV always lives at
+    <a href="https://wonbo.site/cv.html">wonbo.site/cv.html</a>.
+  </p>
+
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+
+    var btn = document.getElementById('print-btn');
+    if (btn) btn.addEventListener('click', function () { window.print(); });
+
+    /* Same runtime assembly as the homepage, so the address is not
+       sitting in the HTML source for scrapers. */
+    var u = 'wonbo123', h = 'gmail.com';
+    var el = document.getElementById('cv-email');
+    if (el) {
+      var a = document.createElement('a');
+      a.href = 'mailto:' + u + '@' + h;
+      a.textContent = u + '@' + h;
+      el.textContent = '';
+      el.appendChild(a);
+    }
+  })();
+</script>
+</body>
+</html>
