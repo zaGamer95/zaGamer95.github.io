@@ -546,3 +546,36 @@ section + section { border-top: 1px solid var(--line); }
 @media (max-width: 460px) {
   .site-nav { display: none; }
 }
+
+/* ============================================================
+   Hero portrait
+   ------------------------------------------------------------
+   Two columns on desktop: copy left, portrait right. Below the
+   breakpoint the photo moves above the text, sized so it never
+   pushes the name off the first screen.
+   ============================================================ */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero-portrait { margin: 0; }
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lift);
+}
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  /* photo first, then the copy */
+  .hero-portrait { order: -1; width: min(62vw, 15rem); }
+}

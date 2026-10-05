@@ -42,6 +42,7 @@ const I18N = {
     'hero.status': 'MSc in Biomedical Informatics, NUS — graduating Jul 2027',
     'hero.headline': 'Data scientist and backend engineer, now working in <strong>biomedical informatics</strong> — building systems that turn messy data into something clinicians and users can actually act on.',
     'hero.intro': "Between 2020 and 2026 I worked across games, NLP and analytics in Seoul — gameplay and live-ops tooling for a title that reached ten million players, question-answering APIs at an NLP company, and analytics spanning an academy's 80,000-book catalogue, LG Electronics' regional storefronts and a CRM rollout at AmorePacific. I like the unglamorous part: the pipeline, the schema, the thing that has to keep working on a Tuesday.",
+    'hero.portraitAlt': 'Wonbo Shim, smiling, wearing a navy jacket over a light shirt',
     'hero.ctaWork': 'See the work',
 
     'about.eyebrow': 'About',
@@ -140,6 +141,7 @@ const I18N = {
     'hero.status': '싱가포르국립대학교 의생명정보학 석사과정 — 2027년 7월 졸업 예정',
     'hero.headline': '데이터 사이언티스트이자 백엔드 엔지니어입니다. 지금은 <strong>의생명정보학</strong> 분야에서, 정리되지 않은 데이터를 임상의와 사용자가 실제로 판단에 쓸 수 있는 형태로 만드는 시스템을 만들고 있습니다.',
     'hero.intro': '2020년부터 2026년까지 서울에서 게임, 자연어처리, 데이터 분석을 오가며 일했습니다. 천만 명이 플레이한 게임의 콘텐츠와 라이브 운영 도구, NLP 회사의 질의응답 API, 그리고 8만 권 규모의 도서 데이터베이스부터 LG전자의 지역별 스토어와 아모레퍼시픽 CRM 도입까지 이어지는 분석 업무를 맡았습니다. 저는 화려하지 않은 쪽을 좋아합니다. 파이프라인, 스키마, 화요일에도 멀쩡히 돌아가야 하는 것들 말입니다.',
+    'hero.portraitAlt': '밝은 셔츠 위에 네이비 재킷을 입고 미소 짓고 있는 심원보',
     'hero.ctaWork': '작업 보기',
 
     'about.eyebrow': '소개',
@@ -238,6 +240,7 @@ const I18N = {
     'hero.status': 'シンガポール国立大学 生物医学情報学 修士課程 — 2027年7月修了予定',
     'hero.headline': 'データサイエンティスト兼バックエンドエンジニアです。現在は<strong>生物医学情報学</strong>の領域で、整っていないデータを臨床医や利用者が実際に判断に使える形にするシステムをつくっています。',
     'hero.intro': '2020年から2026年まで、ソウルでゲーム・自然言語処理・データ分析を横断して働いてきました。一千万人がプレイしたタイトルのコンテンツとライブ運用ツール、NLP企業での質問応答API、そして8万冊規模の蔵書データからLGエレクトロニクスの地域別ストア、アモーレパシフィックのCRM導入までを含む分析業務です。私は地味な部分が好きです。パイプライン、スキーマ、火曜日にもきちんと動き続けなければならないものたちです。',
+    'hero.portraitAlt': '明るいシャツにネイビーのジャケットを着て微笑むシム・ウォンボ',
     'hero.ctaWork': '仕事を見る',
 
     'about.eyebrow': '紹介',
@@ -336,6 +339,7 @@ const I18N = {
     'hero.status': '新加坡国立大学 生物医学信息学硕士 — 预计2027年7月毕业',
     'hero.headline': '我是数据科学家兼后端工程师，目前专注于<strong>生物医学信息学</strong>，构建能把杂乱数据转化为临床医生与使用者真正可据以行动的系统。',
     'hero.intro': '2020年至2026年间，我在首尔横跨游戏、自然语言处理与数据分析工作：为一款触达千万玩家的游戏开发玩法与线上运营工具，在一家NLP公司构建问答API，并负责从八万册图书目录到LG电子各区域商店、再到爱茉莉太平洋CRM落地的分析工作。我喜欢不起眼的那部分——数据管道、数据结构，以及那些在周二也必须照常运转的东西。',
+    'hero.portraitAlt': '沈元輔，身着浅色衬衫与藏青色外套，面带微笑',
     'hero.ctaWork': '查看作品',
 
     'about.eyebrow': '关于',
