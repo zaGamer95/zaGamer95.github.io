@@ -54,35 +54,6 @@ const PROJECTS = [
   },
   {
     title: {
-      en: 'Customer shopping trends analysis',
-      ko: '고객 구매 트렌드 분석',
-      ja: '顧客購買トレンド分析',
-      zh: '顾客购物趋势分析',
-    },
-    year: '2025',
-    category: 'professional',
-    featured: true,
-    blurb: {
-      en: 'Exploratory analysis of a public retail dataset — segmenting customers by ' +
-          'spend, category preference and season, then pulling the same cuts in SQL to ' +
-          'sanity-check the notebook. A compact end-to-end look at how I go from raw ' +
-          'table to a claim I am willing to defend.',
-      ko: '공개 리테일 데이터셋을 탐색적으로 분석했습니다. 지출액, 카테고리 선호, 계절을 기준으로 고객을 ' +
-          '나눈 뒤 동일한 구간을 SQL로 다시 뽑아 노트북의 결과를 교차 검증했습니다. 원본 테이블에서 ' +
-          '변호할 수 있는 결론까지 가는 과정을 압축해 보여 주는 작업입니다.',
-      ja: '公開されている小売データセットの探索的分析です。支出額・カテゴリ嗜好・季節で顧客を分類し、' +
-          '同じ切り口をSQLでも取り直してノートブックの結果を検証しました。生のテーブルから' +
-          '自分で擁護できる結論に至るまでの流れを、簡潔にまとめたものです。',
-      zh: '对公开零售数据集的探索性分析：按消费金额、品类偏好与季节对顾客分层，再用SQL取出相同切面，' +
-          '以交叉验证notebook中的结果。这是一次从原始数据表走到可被辩护的结论的完整演示。',
-    },
-    tags: ['Python', 'pandas', 'SQL', 'Jupyter'],
-    links: [
-      { label: 'source', href: 'https://github.com/zaGamer95/portfolio1', external: true },
-    ],
-  },
-  {
-    title: {
       en: 'Argo — AI onboarding assistant',
       ko: 'Argo — AI 온보딩 어시스턴트',
       ja: 'Argo — AIオンボーディング・アシスタント',

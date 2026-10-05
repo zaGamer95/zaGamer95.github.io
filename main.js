@@ -195,6 +195,12 @@
   var CATEGORIES = ['professional', 'academic', 'personal'];
   var VISIBLE_BY_DEFAULT = 6;
 
+  /* With only a couple of projects the filter row is more structure than
+     content — four buttons, one of them reading zero. Below this many it
+     stays hidden and the shelf just lists everything; add a third project
+     and the filters come back on their own. */
+  var FILTERS_MIN = 3;
+
   var grid = document.getElementById('project-grid');
   var filterBar = document.getElementById('filters');
   var note = document.getElementById('filter-note');
@@ -213,9 +219,13 @@
     return all.filter(function (p) { return p.category === id; }).length;
   }
 
+  function showFilters() { return all.length >= FILTERS_MIN; }
+
   function buildFilters() {
     if (!filterBar) return;
     filterBar.innerHTML = '';
+    filterBar.hidden = !showFilters();
+    if (!showFilters()) { active = 'all'; return; }
     ['all'].concat(CATEGORIES).forEach(function (id) {
       var btn = document.createElement('button');
       btn.type = 'button';
@@ -324,10 +334,13 @@
     grid.innerHTML = '';
 
     if (note) {
-      var n = active === 'all' ? '' : t('note.' + active);
+      var n = (showFilters() && active !== 'all') ? t('note.' + active) : '';
       note.textContent = n;
       note.hidden = !n;
     }
+
+    var lede = document.querySelector('#projects .section-lede');
+    if (lede) lede.textContent = t(showFilters() ? 'proj.lede' : 'proj.ledeFew');
 
     if (!list.length) {
       var empty = document.createElement('p');
